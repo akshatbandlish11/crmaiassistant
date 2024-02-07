@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Voiceflow Chat</title>
+  <link rel="stylesheet" href="https://akshatbandlish11.github.io/css-hosting/fullpage-%20CSS.css">
+  <style>
+    #voiceflow-chat {
+      width: 80vw;
+      height: 80vh;
+      margin: 0;
+      position: fixed;
+      top: 10px; /* Added px to ensure proper CSS */
+      bottom: 10px; /* Added px to ensure proper CSS */
+      left: 0;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+    (function (d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function () {
+        window.voiceflow.chat.load({
+          verify: { projectID: '65b365d5a0bb9b38ed01b7cc' },
+          url: 'https://general-runtime.voiceflow.com/',
+          versionID: 'development',
+          assistant: {
+            stylesheet: "https://akshatbandlish11.github.io/css-hosting/fullpage-%20CSS.css"
+          }
+        }).then(() => {
+          setTimeout(() => {window.voiceflow.chat.open();}, 500);
+        });
+      };
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+<div id="voiceflow-chat"></div>
+</body>
+</html>
